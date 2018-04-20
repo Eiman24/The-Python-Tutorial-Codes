@@ -16,3 +16,7 @@ print(a - b)	# letters in a but not in b
 print(a | b)	# letters in a or b or both
 print(a & b)	# letters in both a and b
 print(a ^ b)	# letters in a or b but not both 对称差
+
+# set comprehensions
+a = {x for x in 'abracadabra' if x not in 'abc'}
+print(a)
