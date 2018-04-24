@@ -33,13 +33,14 @@ f()
 #----------------------------------------------------------------#
 
 # When the default is a mutable object such as a list,dic,class,
-# evaluate won't appear only onece.
+# The default value is evaluated only once.
+# 默认值必须每次重新赋值后才会产生后续影响.
 
 def f(a, L = []):
 	L.append(a)
 	return L
 
-print(f(1))
+print(f(1, L = [6,7]))
 print(f(2))
 print(f(3))
 
