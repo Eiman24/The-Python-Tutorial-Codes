@@ -46,7 +46,14 @@ contents = 'eels'
 print('My hovercraft is full of {}.'.format(contents))
 print('My hovercraft is full of {!r}.'.format(contents))
 
-list = [1,2,3,'阿短',True]
-tuples = (1,6,4,'呵呵')
-dict = {1:'阿短', 2:'绿豆', 3:'小可', 4:'阿正'}
-print(dict[1])
+import math
+print('The value of PI is approximately {0:.3f}'.format(math.pi))
+
+# 10 stand for strings 10d for numbers
+table = {'Sjoerd': 4127,'Jack': 4098, 'Dcab': 7678}
+for name, phone in table.items():
+	print('{0:10} ==> {1:10d}'.format(name,phone))
+
+print('Jack: {0[Jack]:d}; Sjoerd: {0[Sjoerd]:d}; Dcab: {0[Dcab]:d}'.format(table))
+
+print('Jack: {Jack:d}; Sjoerd: {Sjoerd:d}; Dcab: {Dcab:d}'.format(**table))
