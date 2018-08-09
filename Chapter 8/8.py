@@ -38,3 +38,17 @@ except ValueError:
 except:
     print("Unexpected error:", sys.exc_info()[0])
     raise
+
+raise NameError('HiThere')
+
+raise ValueError
+
+# The problem with this code is that it leaves the file open for an 
+# indeterminate amount of time after this part of the code has finished executing. 
+for line in open("myfile.txt"):
+    print(line, end="")
+# After the statement is executed, the file f is always closed, 
+# even if a problem was encountered while processing the lines.
+with open("myfile.txt") as f:
+    for line in f:
+        print(line, end="")
